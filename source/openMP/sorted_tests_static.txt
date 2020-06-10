@@ -1,0 +1,36 @@
+Generation Commands: ./par_sieve 10000 > time_tests.txt
+                     sort -nr time_tests.txt > sorted_tests_static.txt
+
+0.000045: time for base    2 by thread num  0
+0.000027: time for base    3 by thread num  0
+0.000016: time for base    5 by thread num  0
+0.000012: time for base   61 by thread num  7
+0.000012: time for base   45 by thread num  5
+0.000012: time for base   29 by thread num  3
+0.000011: time for base   11 by thread num  1
+0.000011: time for base    7 by thread num  0
+0.000010: time for base   69 by thread num  8
+0.000010: time for base   53 by thread num  6
+0.000010: time for base   37 by thread num  4
+0.000006: time for base   17 by thread num  1
+0.000006: time for base   13 by thread num  1
+0.000005: time for base   23 by thread num  2
+0.000005: time for base   19 by thread num  1
+0.000004: time for base   93 by thread num 11
+0.000004: time for base   20 by thread num  2
+0.000003: time for base   67 by thread num  7
+0.000003: time for base   59 by thread num  6
+0.000003: time for base   31 by thread num  3
+0.000002: time for base   83 by thread num  9
+0.000002: time for base   77 by thread num  9
+0.000002: time for base   49 by thread num  5
+0.000002: time for base   47 by thread num  5
+0.000002: time for base   43 by thread num  4
+0.000002: time for base   41 by thread num  4
+0.000002: time for base   35 by thread num  3
+0.000001: time for base   97 by thread num 11
+0.000001: time for base   89 by thread num 10
+0.000001: time for base   85 by thread num 10
+0.000001: time for base   79 by thread num  9
+0.000001: time for base   73 by thread num  8
+0.000001: time for base   71 by thread num  8

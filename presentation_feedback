@@ -1,0 +1,346 @@
+
+CS87 Final Presentation Feedback
+ 
+Part A: anonymized feedback from classmates
+Part B: feedback from Tia
+ 
+=================================
+Part A. Feedback from classmates
+=================================
+ 
+Talk feedback for Kevin, Mickey, Rick 
+
+* at least one thing did well:
+
+  - Really nice organization in presentation!
+
+  - Super cool that you have four different implementations!
+
+
+
+* at least one thing to improve:
+
+  - I think at some point the gif of the Seive algorithm became 
+
+    a bit too redundant and a bit distracting, especially because
+
+    it appears in a number of slides. 
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+* at least one thing did well: Great introduction and very clear 
+
+verbal presentation!
+
+
+
+* at least one thing to improve: My internet was not working well 
+
+for some of the presentation so this might be something that was 
+
+Addressed, but I'm not completely sure what it means to "widen the
+
+sieve." Besides that, from what I was able to see of the 
+
+presentation, it was a great job overall!
+
+
+
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+* at least one thing did well: I really liked how concrete your project
+
+	was and how you could very "easily" test your implementations.
+
+	I mean that in terms of the fact that you could visualize the
+
+	results and compare them in a comprehensible way.
+
+
+
+* at least one thing to improve:
+
+	A little more on the results slides as a summary would be nice
+
+	see alongside your speaking points. Just makes it easier to absorb
+
+	consolidated information. 
+
+
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+* at least one thing did well:
+
+
+
+It was cool to see that you tried multiple different kinds of implementations.
+
+Slides are very nice and clean. Analysis specific to CUDA was really good.
+
+
+
+* at least one thing to improve:
+
+
+
+Some even bigger runs would have been cool to see, but I understand the 
+
+limiations.
+
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+* at least one thing did well:
+
+	-good pacing of speed
+
+	-clear explanations, easy to understand/follow
+
+	-very clear how parallelization is used to help 
+
+
+
+* at least one thing to improve:
+
+	-I'm personally interested in more investigations of why CUDA performance isn't as good compared to others
+
+
+
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+* at least one thing did well:
+
+Good explanation of how the algorithm works in series and in parallel
+
+
+
+* at least one thing to improve:
+
+I think there was too much focus on the problems that came up while implementing
+
+
+
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+* at least one thing did well:
+
+
+
+Good and clear explanation of the background, solution, and any problem (especially load balancing problem) the 
+
+team encountered.  
+
+
+
+* at least one thing to improve:
+
+
+
+Think the graphs could use some work. Maybe use a logarithmic scale, instead of linear one for the y-axis?
+
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+* at least one thing did well:
+
+	Nice use of diagrams, the moving one was super useful for understanding the
+
+	problem space 
+
+
+
+* at least one thing to improve:
+
+	Formatting of testing info - a lot of numbers and parameters, could have been
+
+	put in a table or something to make it easier to visually compare parameter values 
+
+
+
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+* at least one thing did well:
+
+> Diagrams, graphs and GIFs were helpful 
+
+
+
+* at least one thing to improve:
+
+> It was a bit hard to follow at times what approach you were talking about and where you were in your overall presentation flow
+
+
+
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+* at least one thing did well: I really liked that this presentation put a
+
+  strong focus on parallelization. The challenges and solutions were elaborated
+
+  very well. There were also plenty of connections to materials we learned in
+
+  this class. The presentation remained easy to follow despite the fact that
+
+  you experimented with three different approaches. I think this is the only
+
+  presentation I could follow from beginning to end, and that probably says
+
+  more about your skills (and my attention span) than about the other groups.
+
+  Well done!!
+
+
+
+* at least one thing to improve: future work on Cuda implementation?
+
+
+
+
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+* at least one thing did well:
+
+-I liked the topic of the presentation!  It seems like a nice problem that people have thought about for many years
+
+-I was very impressed that you did three implementations
+
+* at least one thing to improve:
+
+-there was a bit of background noise that was very distracting and really interrupted the flow of the presentation
+
+-it would be nice to know a little bit more about the application of the problem, how exactly can the prime numbers be used.
+
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+
+
+* at least one thing did well: they did a good job of explaining all of the implementations technically without getting into too much detail
+
+
+
+
+
+* at least one thing to improve: maybe discuss some research done prior to project?
+
+
+
+--------
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+* at least one thing did well:
+
+
+
+Great use of animations! I also liked the holistic approach to what we've
+
+learned in the class, where you tried all sorts of different parallelization.
+
+
+
+* at least one thing to improve:
+
+
+
+I think that your presentation could have been improved by a little more
+
+brevity. I also would have liked to see a discussion on further optimizations to
+
+the sieve of Erastothenes from an algorithmic perspective.
+
+
+
+--------
+ 
+=================================
+Part B. Tia's Feedback
+=================================
+ 
+Talk feedback for Kevin, Mickey, Rick 
+
+
+
+* at least one thing did well:
+
+
+  * a very nice talk overall!
+
+  * well organized and presented
+
+  * clear/understandable intro with animation of the algorithm   
+
+  * why shared memory nice
+
+  * very nice explaination of the different parallel algs/approaches (good 
+
+    overview, clear explaination, clear discussion of expectations and
+
+    issues (and sometime solutions...like in openMP with dynamic/static)
+
+  * nice results and explaination of results
+
+
+* at least one thing to improve:
+
+  * the animation once is nice, but on a loop over and over on subsequent
+
+    slides, like on the OpenMP slide, was a bit distracting 
+
+  * parallel approaches could be 2 slides each instead of just 1
+
+    1: idea of parallelization expectations 2: issues and solutions
+
+
+

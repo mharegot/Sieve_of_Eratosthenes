@@ -1,0 +1,125 @@
+% this is an example bibtex file, there are different types of entries
+% each with different format requirements
+% the most commonly used are book, inproceedings, article, and misc 
+% annotate is used to add comments about the work to the .bib file
+% entries (its contents will not show up in the References section) 
+% see http://www.bibtex.org/ for lots more information
+
+
+% not every field of each style of entry is required, but author, title,
+% year, and some specification of how it is published is required for
+% most formats  (I could remove month here, for example)
+% anything I put in { } will be translated as is (this is how I can
+% force capitaliziation), anything in "" will be capitalize based on
+% the whim of bibtex
+
+@TECHREPORT{Wirian,
+  author = "David J. Wirian",
+  title = "Parallel Prime Sieve: Finding Prime Numbers",
+  year = {1978},
+  institution = {Massey University},
+  source = {https://www.massey.ac.nz/~mjjohnso/notes/59735/seminars/01077635.pdf},
+  publisher = {Massey University}
+}
+
+@TECHREPORT{Bohkari,
+  author = "Shahid H. Bohkari",
+  title = "Multiprocessing the Sieve of Eratosthenes",
+  year = {1986},
+  institution = {NASA Langley Research Center},
+  source = {https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19870002076.pdf},
+  publisher = {NASA}
+}
+
+@ARTICLE{Sorenson,
+  author = "Jonathan Sorenson and Ian Panberry",
+  title = "Two Fast Parallel Prime Number Sieves",
+  source = {https://reader.elsevier.com/reader/sd/pii/S0890540184710820?token=5BEA1D8246602C1EDF04F00A3A4DAB43B6C8A6B0EDB488C81C970A93F3F84B95C9C88169F071A47B46ACA82B18A89B82},
+  year = 1994
+}
+
+@ARTICLE{Bhat,
+  author = "Ghanapathi Bhat and  N Gopalakhna Kini and Ray Siddarth and Srikanth Prabhu and Govardhana Hedge",
+  title = "Parallelization of Sieve of Erasothenes",
+  source = {https://www.researchgate.net/profile/Govardhan_Hegde/publication/288002384_Parallelization_of_Sieve_of_Eratosthenes/links/595a32df458515a5406fbc5b/Parallelization-of-Sieve-of-Eratosthenes.pdf},
+  journal = "{IJSRCAMS} https://www.ijsrcsams.com/",  
+  year = 2014
+
+}
+
+@ARTICLE{RSA,
+  author = "R.L. Rivest and A. Shamir and L. Adleman",
+  title = "A Method for Obtaining Digital Signatures and Public-Key CryptoSystems",
+  source = {https://dl.acm.org/doi/10.1145/359340.359342},
+  journal = "{Communications of the ACM} https://dl.acm.org/magazine/cacm",
+  year = 1978
+}
+
+@INPROCEEDINGS{newhall:nswap2L, 
+  author = "Tia Newhall and Douglas Woos",
+  title = "Incorporating Network {RAM} and Flash into Fast Backing Store 
+  for Clusters",
+  booktitle = "{IEEE} Cluster Conference", 
+  MONTH = September,
+  year = 2011
+} 
+
+@MISC {bulatov:HYP,
+        AUTHOR = "Vladimir Bulatov",
+        TITLE = "Hyper{P}rof - hyperbolic profile browser for {J}ava",
+        HOWPUBLISHED = "http://pc153.mt.ic.ac.uk/Bulatov/HyperProf/",
+        ANNOTE =  "visualization for Java -prof output, based on 
+          Poincarte's 2-D model of hyperbolic space.
+          "
+}
+
+@MISC {newhall:help,
+        AUTHOR = "Tia Newhall",
+        TITLE = "{CS} and {U}nix Help Pages",
+        HOWPUBLISHED = "\url{www.cs.swarthmore.edu/\~newhall/unixlinks.html}",
+        ANNOTE =  "
+          "
+}
+
+@BOOK {unixV,
+        KEY = "unixV",
+        AUTHOR = "AT\&T",
+        TITLE = "System {V} {I}nterface {D}efinition, {T}hird {E}dition",
+        PUBLISHER = {Addison-Wesley},
+        YEAR = 1989
+}
+
+
+@ARTICLE {armstrong:hotspot,
+        AUTHOR = "Eric Armstrong",
+        TITLE = "HotSpot: {A} new breed of virtual machine",
+        JOURNAL = "{JavaWorld}  http://www.javaworld.com/",
+        YEAR = 1998,
+        MONTH = March,
+        ANNOTE =  ""
+}
+
+@TECHREPORT {metering,
+        KEY = "metering",
+        AUTHOR = "Mark Kantrowitz",
+        TITLE = "Portable {U}tilities for {C}ommon {L}isp, {U}ser {G}uide  and {
+I}mplementation {N}otes",
+        INSTITUTION = "{Carnegie Mellon University}",
+        NUMBER = "CMU-CS-91-143",
+        MONTH= "May",
+        YEAR = 1991,
+        ANNOTE =  "
+           Profiling tool for Lisp programs
+           works by annotating code with a specification of which functions
+           to monitor
+           can provide inclusive and exclusive timing information, number of
+           calls, cons per call, and adjust times with an estimate of total
+           timing overhead, plus the an estimate of timing overhead is
+           subtracted from each function time
+	"
+}
+
+
+
+
+

@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{subfigure,indentfirst}
+% for url
+\usepackage{hyperref}
+% for underlined text
+\usepackage[normalem]{ulem}
+
+% use some packages for importing figures of different types
+% pdfig is one for importing .pdf files.  sadly, they are not all
+% compatible, so you often have to convert figures to the same type.
+%\usepackage{pdffig}
+\usepackage{graphicx}
+
+
+% this starts the document
+\begin{document}
+
+\title{CS87 Midway Progress Report: Widening The Sieve}
+
+\author{Kevin Zheng, Mickey Haregot, Richard Muniu\\
+Computer Science Department, Swarthmore College, Swarthmore, PA  19081}
+
+\maketitle
+
+\section{Project Schedule/Milestones}
+
+\begin{itemize}
+    \item \textbf{Week 1} (Week of April 6th) \\
+     This week, we went through and refined our sources, and finished setting up our 
+     project plans and milestones. After meeting with Tia, we decided to implement
+     the OpenMP version of the parallel sieve, using for loop primitives to parallelize
+     outer loop that found the next prime in the array rather than the inner loop that 
+     marks off multiples in the array. We additionally completed and submitted our problem
+     proposal, tested our parallelization for correctness, and began working on a parallel
+     pthread and CUDA implementation. 
+     \vspace{0.1in}
+     
+    \item \textbf{Week 2} (Week of April 13th, Project Work Week)
+    
+     This week, we began testing our OpenMP implementation for performance improvements,
+     and noticed the load balancing issue that our papers hinted at. We refactored our code
+     to use dynamic thread scheduling to overcome this, and wrote some tests in preparation
+     for bigger runs on the Strelka cluster. We also requested for login access to the 
+     cluster.
+     
+     Additionally, we set up the framework for our balanced pthreads and CUDA 
+     implementations, and brainstormed on algorithms for parallelizing our sequential version
+     for these two implementations.
+     \vspace{0.1in}
+     
+    \item \textbf{Week 3} (Week of April 20th)
+    
+     This week, we began working on our project presentation and made some big 
+     runs on the Strelka cluster. We synthesized our intermediate results, and used
+     them in our presentation. We also rescheduled our Strelka tests, which ended 
+     up timing out before anticipated, and wrote our midway report.    
+     
+     We intend to continue synthesizing these results, and begin drafting our final 
+     report later this week. We will also continue implementing our pthreads and 
+     CUDA implementations.
+     \vspace{0.1in}
+    
+    \item \textbf{Week 4} (Week of April 27th)
+    
+     For the final week, we hope to complete and test our balanced pthread and CUDA
+     implementation, time permitting. We intend to continue analysing and discussing
+     our results, leaving room for additional tests as needed. We will also begin work 
+     on the final presentation, and comment, clean, and restructure our repository code.
+     
+     Our milestones this week would be having our project report, final code, and a
+     project presentation based on our report.
+    
+\end{itemize}
+
+\section {Difficulties}
+{\it
+% One paragraph describing any difficulties you have encountered so far and how
+% you plan to resolve them (or how you did reslove them). If you don' t know how
+% to resolve them or have some ideas but have not completely figured it out yet,
+% then explicitly tell me this so that I can try to suggest some solutions.
+}
+
+So far, we have mainly run into issues during our OpenMP implementation, since
+this is what we have been primarily working on. The challenge that we saw was that
+the default OpenMP static scheduling would give the vast majority of the workload
+to a single thread. As a result, we saw very little parallel speed up. We solved
+this problem by using OpenMP dynamic scheduling instead. As of this moment, our
+work towards our CUDA and pthreads implementations are not far along enough
+for us to identify specific issues, but we foresee that it might be difficult
+to make a sound CUDA implementation. There are a few unanswered questions about
+CUDA implementation details. For example, how we should divide the workload into
+blocks. More specifically, we intended to create a thread for each potential
+``base'' number, which includes all numbers from 2 to $\sqrt{N}$. Since our
+test sizes of $N$ can become massive, we suspect this may be too many threads
+for any GPU to handle. The scheme we came up with involves calling the kernel
+multiple times on a different subset of the problem every time, but we suspect
+this may be difficult to implement and that we will run into difficulties later.
+
+\end{document}
+

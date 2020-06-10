@@ -1,0 +1,136 @@
+ 
+Timing Tests For parallel and sequantial runs of OpenMP Sieve
+=============================================================
+ 
+n = 1x10^1 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.017s
+user	0m0.266s
+sys	0m0.003s
+____________________________________________________________ 
+ 
+n = 1x10^2 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.016s
+user	0m0.269s
+sys	0m0.003s
+____________________________________________________________ 
+ 
+n = 1x10^3 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.015s
+user	0m0.267s
+sys	0m0.002s
+____________________________________________________________ 
+ 
+n = 1x10^4 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.013s
+user	0m0.223s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^5 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.016s
+user	0m0.286s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^6 
+Sequential runtime: 
+
+real	0m0.008s
+user	0m0.007s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.022s
+user	0m0.366s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^7 
+Sequential runtime: 
+
+real	0m0.076s
+user	0m0.075s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.034s
+user	0m0.597s
+sys	0m0.004s
+____________________________________________________________ 
+ 
+n = 1x10^8 
+Sequential runtime: 
+
+real	0m1.962s
+user	0m1.943s
+sys	0m0.016s
+Parallel runtime: 
+
+real	0m0.227s
+user	0m3.539s
+sys	0m0.021s
+____________________________________________________________ 
+ 
+n = 1x10^9 
+Sequential runtime: 
+
+real	0m26.786s
+user	0m26.558s
+sys	0m0.171s
+Parallel runtime: 
+
+real	0m2.060s
+user	0m59.396s
+sys	0m0.345s
+____________________________________________________________ 
+ 
+n = 1x10^10 
+Sequential runtime: 
+
+real	5m3.893s
+user	5m1.393s
+sys	0m1.787s
+Parallel runtime: 
+
+real	0m19.096s
+user	11m5.320s
+sys	0m2.792s
+____________________________________________________________ 
+ 
+n = 1x10^11 
+Sequential runtime: 

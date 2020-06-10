@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#SBATCH -t 12:00:00
+#SBATCH -n 32
+#SBATCH -N 1
+#SBATCH -p himem  
+#SBATCH -A rmuniu1
+#SBATCH --output=/home/rmuniu1/cs87tests/results/balanced/output_%j.log
+
+OUTFILE=results/testResults$SLURM_JOB_ID
+
+echo " " &>> $OUTFILE
+echo "Strelka tests for balanced sieve" &>> $OUTFILE
+echo "==============================================================" &>> $OUTFILE
+
+#using 32 threads on himem for testing
+nthreads=32
+
+for n in {1..18}
+  do
+    ((SIZE=10**n))
+    echo " " &>> $OUTFILE
+    echo "n = 1x10^$n" &>> $OUTFILE
+    echo "Balanced runtime:" &>> $OUTFILE
+    (time ./bal_sieve $SIZE $nthreads) &>> $OUTFILE
+    echo "Sequential runtime:" &>> $OUTFILE
+    (time ./seq_sieve $SIZE) &>> $OUTFILE
+    echo "___________________________________________________________" &>> $OUTFILE
+  done
+

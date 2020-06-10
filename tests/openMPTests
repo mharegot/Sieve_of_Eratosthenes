@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#SBATCH -t 12:00:00
+#SBATCH -n 32
+#SBATCH -N 1
+#SBATCH -p himem  
+#SBATCH -A rmuniu1
+#SBATCH --output=/home/rmuniu1/cs87tests/openMP/results/output_%j.log
+
+OUTFILE=results/testResults$SLURM_JOB_ID
+
+echo " " &>> $OUTFILE
+echo "Timing Tests For parallel and sequantial runs of OpenMP Sieve" &>> $OUTFILE
+echo "=============================================================" &>> $OUTFILE
+
+for i in {1..3}
+  do
+  echo "TEST RUN $i--------------------------------------------------" &>> $OUTFILE
+    for n in {1..18}
+      do 
+        ((SIZE=10**n))
+        echo " " &>> $OUTFILE
+        echo "n = 1x10^$n " &>> $OUTFILE
+        echo "Sequential runtime: " &>> $OUTFILE
+        (time ./seq_sieve $SIZE) &>> $OUTFILE
+        echo "Parallel runtime: " &>> $OUTFILE
+        (time ./par_sieve $SIZE) &>> $OUTFILE
+        echo "____________________________________________________________ " &>> $OUTFILE
+      done
+  done

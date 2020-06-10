@@ -1,0 +1,198 @@
+Talk feedback for Group 4. Kevin, Mickey, Rick 
+
+Two parts to this feedback on your midway project report:
+
+  A. anonymized feedback from your classmate
+  B. my feedback with more verbose comments about parts
+     of your presentation
+
+---------------------------------------------------------
+ A. feedback from your classmates about your presentation
+---------------------------------------------------------
+
+   1.  What was at least one thing that the group did well  
+
+   The explanation for the reason for balanced pthreads was clear and well explained.
+
+   2. At least one thing on which the group could improve
+
+   A bit more explanation of the type of experiments you plan to run, the more
+   specific questions you're trying to answer, could be good.
+
+---
+
+   1.  What was at least one thing that the group did well  
+	- images helps in understanding
+	- great talking about what you've done 
+	  and the different methods
+
+   2. At least one thing on which the group could improve
+	- choose a different slide theme... the 
+	  rectangle on the right covered writing 
+	  and images, at least when presenting
+	- intro could be a little longer. I understood
+	  the gist of the algorithm, but I wish it was 
+	  explained a little more depth
+
+---
+
+ 1.  What was at least one thing that the group did well
+
+       Clear presentation of the background, key ideas, progress, and
+       difficulties. Good use of figures.
+
+   2. At least one thing on which the group could improve
+
+      The concepts of static and dynamic scheduling was somewhat hard to follow
+      as I am not too familiar with the content.
+---
+
+   1.  What was at least one thing that the group did well  
+	I like how they addressed the problem of the Sieve of Eratosthenes
+	through a couple of different methods of parallelization. They did 
+	a great job of explaining the load balancing issue. 
+
+   2. At least one thing on which the group could improve
+	Maybe more about results and why they may see differences between
+	the parallelization methods (I know they aren't fully done with
+	implementation either). 
+
+---
+
+
+   1.  What was at least one thing that the group did well  
+	Really liked the variety of implementations for solving the prime problem
+	Lots of good implementation progress so far and discussed the takeaways well
+
+   2. At least one thing on which the group could improve
+	Can talk about tradeoffs/evaluations of diff systems (openmp, cuda) on this problem
+
+---
+
+   1.  What was at least one thing that the group did well  
+	> The structure of the presentation was clear and helpful 
+	for understanding what you are doing.
+	> The parts were split well (evenly) between the different 
+	group members - same with answering of the questions.
+
+   2. At least one thing on which the group could improve
+	> I’m not sure if this is just how the slides were shared on
+	Zoom but all the slides looked like they were cut so we 
+	couldn’t see see all of the diagrams. 
+---
+
+   1.  What was at least one thing that the group did well  The explanations on
+   balanced threads and dynamic balancing were very clear and useful. Answers
+   in the question section also clear up confusion about how this algorithm
+   (which seems very interesting) and how parallelization works. 
+
+   2. At least one thing on which the group could improve I found the
+   presentation hard to follow at the beginning. The algorithm makes sense but
+   is still an unfamiliar concept, so I'd appreciate if you guys spent a bit
+   more time easing us into your topic. 
+
+---
+
+   1.  What was at least one thing that the group did well  
+	Really good use of images and gifs to help illustrate concepts
+
+   2. At least one thing on which the group could improve
+	Results format could be better - difficult to read command line results,
+	putting them in a table (or maybe graph) with higher contrast and a 
+	clearer dilineation of important vs extraneous information would be better
+---
+
+   1.  What was at least one thing that the group did well  
+
+   I thought that the animation for the Sieve was a good explanation of how the
+   algorithm worked. I also really appreciated the openMP section mentioning how
+   scheduling works.
+
+   2. At least one thing on which the group could improve
+
+   I would have appreciated some more description on how the parallelized
+   implementation worked. It was unclear how the sieve was shared between
+   threads and how the workload was distributed.
+
+---
+
+   1.  What was at least one thing that the group did well  
+-nice overview of the problem and why it is relevant
+
+   2. At least one thing on which the group could improve
+-I would like to know more about the openMP implementation or even just about
+the specifics of your algorithm
+
+---
+
+   1.  What was at least one thing that the group did well  
+I appreciated the breakdown of the different methods for implementing the algorithm
+
+   2. At least one thing on which the group could improve
+I felt like there were too many implementation details, making the broad
+strokes of the techniques hard to follow
+
+---
+
+   1.  What was at least one thing that the group did well  
+
+	Interesting topic and engaging slides.			
+
+   2. At least one thing on which the group could improve
+
+	Better explanation of the sieve of Eratosthenes in the beginning. 
+	
+---
+
+   1.  What was at least one thing that the group did well  
+       - Nice presentation of the algorithm! I really enjoyed the 
+	 infographic. 
+
+       - Nice outlining of the various problems you faced and how 
+	 you solved them. Overall, the progression within the 
+	 prentation was really clear!
+
+   2. At least one thing on which the group could improve
+       - I think there could be a bit more slides explaining about
+	 the ideas/challenges behind the other implementations?
+
+--------------------------------------------------------------
+ B. my feedback on your presentation
+--------------------------------------------------------------
+
+* algorithm for finding prime numbers
+  * good intro
+* sieve of eratosthenes example
+  * nice example illustrated with figure (slow down a bit and refer
+    to figure as you explain)
+
+* methods of implementation
+  * slide good but slow down a bit to explain these a bit more 
+  * show the pseudo code for the sequentail algorithm
+  * explain how/what is parallelized in each on slides and
+    talk through (like Kevin added about balanced pthreads)
+
+* openMP
+  add pseudo code to this (this is also sequential)
+  it is hard to understand what for loops are you are talking about here
+  the static and dynamic figure is nice, but hard to understand what
+  threads are doing
+
+* nice results!
+
+   1.  What was at least one thing that the group did well  
+
+   * slide org good, logical order
+   * good job answering Qs
+   * nice figures 
+   * it is clear that you know a lot about this
+
+   2. At least one thing on which the group could improve
+
+    * this was presented much too fast, slow down (you had a lot of time left)
+    * add more explaination and details about the algorithms
+    * be more clear about what and how parallelized in each approach
+      (for final presentation have a slide or two explaining each approach,
+       with a figure or example)
+    * show psudo code
+

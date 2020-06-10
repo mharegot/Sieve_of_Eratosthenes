@@ -1,0 +1,128 @@
+ 
+Strelka tests for balanced sieve
+==============================================================
+ 
+n = 1x10^1
+Balanced runtime:
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.004s
+Sequential runtime:
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+___________________________________________________________
+ 
+n = 1x10^2
+Balanced runtime:
+
+real	0m0.003s
+user	0m0.002s
+sys	0m0.004s
+Sequential runtime:
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+___________________________________________________________
+ 
+n = 1x10^3
+Balanced runtime:
+
+real	0m0.003s
+user	0m0.002s
+sys	0m0.005s
+Sequential runtime:
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+___________________________________________________________
+ 
+n = 1x10^4
+Balanced runtime:
+
+real	0m0.004s
+user	0m0.002s
+sys	0m0.009s
+Sequential runtime:
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+___________________________________________________________
+ 
+n = 1x10^5
+Balanced runtime:
+
+real	0m0.007s
+user	0m0.002s
+sys	0m0.023s
+Sequential runtime:
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+___________________________________________________________
+ 
+n = 1x10^6
+Balanced runtime:
+
+real	0m0.017s
+user	0m0.022s
+sys	0m0.044s
+Sequential runtime:
+
+real	0m0.007s
+user	0m0.006s
+sys	0m0.001s
+___________________________________________________________
+ 
+n = 1x10^7
+Balanced runtime:
+
+real	0m0.046s
+user	0m0.154s
+sys	0m0.106s
+Sequential runtime:
+
+real	0m0.076s
+user	0m0.072s
+sys	0m0.004s
+___________________________________________________________
+ 
+n = 1x10^8
+Balanced runtime:
+
+real	0m0.243s
+user	0m2.318s
+sys	0m0.260s
+Sequential runtime:
+
+real	0m2.067s
+user	0m2.043s
+sys	0m0.019s
+___________________________________________________________
+ 
+n = 1x10^9
+Balanced runtime:
+
+real	0m2.448s
+user	0m52.152s
+sys	0m0.922s
+Sequential runtime:
+
+real	0m27.511s
+user	0m27.275s
+sys	0m0.183s
+___________________________________________________________
+ 
+n = 1x10^10
+Balanced runtime:
+
+real	0m16.119s
+user	7m13.450s
+sys	0m4.019s
+Sequential runtime:

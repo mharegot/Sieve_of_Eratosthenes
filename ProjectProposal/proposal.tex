@@ -1,0 +1,353 @@
+% this is a comment in latex
+% substitute this documentclass definition for uncommented one
+% to switch between single and double column mode
+%\documentclass[11pt,twocolumn]{article}
+\documentclass[11pt]{article}
+
+% use some other pre-defined class definitions for the style of this
+% document.   
+% The .cls and .sty files typically contain comments on how to use them 
+% in your latex document.  For example, if you look at psfig.sty, the 
+% file contains comments that summarize commands implemented by this style 
+% file and how to use them.
+% files are in: /usr/share/texlive/texmf-dist/tex/latex/preprint/
+\usepackage{fullpage}
+\usepackage{subfigure,indentfirst}
+% for url
+\usepackage{hyperref}
+% for underlined text
+\usepackage[normalem]{ulem}
+
+% use some packages for importing figures of different types
+% pdfig is one for importing .pdf files.  sadly, they are not all
+% compatible, so you often have to convert figures to the same type.
+\usepackage{epsfig,graphicx}
+
+
+% you can also define your own formatting directives.  I don't like
+% all the space around the itemize and enumerate directives, so
+% I define my own versions: my_enumerate and my_itemize
+\newenvironment{my_enumerate}{
+  \begin{enumerate}
+    \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}}{\end{enumerate}
+}
+
+\newenvironment{my_itemize}{
+  \begin{itemize}
+    \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}}{\end{itemize}
+}
+
+% this starts the document
+\begin{document}
+
+% for an article class document, there are some pre-defined types
+% for formatting certain content: title, author, abstract, section
+
+\title{%
+Widening the Sieve: Parallel Sifting for Prime Numbers \\
+\large Project Type 1}
+
+\author{Richard Muniu, Michael Haregot, Kevin Zheng \\ 
+Computer Science Department, Swarthmore College, Swarthmore, PA  19081}
+
+\maketitle
+
+\section {Introduction}\label{intro} 
+% A 1-2 paragraph summary of the problem you are solving, why it is interesting,
+% how you are solving it, and what conclusions 
+% you expect to draw from your work.
+
+Prime numbers have puzzled mathemeticians for centuries, and to this
+day there remains no obvious method to quickly identify them.
+This property has been exploited to create a variety of encryption
+techniques, making the discovery of large prime numbers essential
+for our personal privacy. Over 2000 years ago, a Greek mathemetician
+created an algorithm to find prime numbers, and to this day it remains
+one of the most effective methods to do so. This algorithm is called
+the Sieve of Eratosthenes.
+
+The idea behind the Sieve is actually very simple. The input to the
+algorithm is a positive integer $n$, and the output is a list
+of all prime numbers less than $n$. To start, we allocate an array
+of size $n$, where all values begin unmarked. We mark spaces $0$ and
+$1$, then continue to iterate through the array starting at position
+$2$. Whenever we encounter an array bucket at position $i$ that is
+unmarked, we proceed to mark all array buckets that are at multiples
+of $i$. By the time the algorithm is complete, any unmarked number
+is a prime number. The time complexity of this procecure has been
+shown to be $O(n\ln{\ln{n}})$~\cite{Wirian}.
+
+This sequential algorithm is very effective, but it has the potential
+to be made much faster by parallelization. In this project, we intend
+to examine potential methods of parallelizing the Sieve of Eratosthenes
+and measure their effects.
+
+
+\section {Related Work}\label{rel}
+% 1-2 paragraphs describing similar approaches to the one you propose. This need
+% not be an exhaustive summary of related literature, but should be used to put
+% your solution in context and/or to support your solution. This is also a good
+% way to motivate your work. This can be a summary taken from your longer
+% annotated bibliography.  
+
+% Here is an example of how to cite someting from the bib 
+% file~\cite{newhall:nswap2L}.  Here is another~\cite{unixV}.  
+% The proposal.bib file has some example 
+% bibtex entries you can use as a guide for entering your own.
+
+% In the Annotated Bibliography~\ref{annon} you will included an expanded description of your related work (and you should cite there as well.
+
+There have been many previous attempts to parallelize the Sieve with
+varying results. There was a paper by NASA in 1986 that shows that they
+used the Sieve as a parallel benchmark test for their multicore
+machines~\cite{Bohkari}.
+They used a parallelization scheme in which they delegated a process to
+marking all of the multiples of a prime. For example, they might have
+one process marking all the multiples of 2 while another process marks
+all the multiples of 3. They saw significant speedups, but only up until
+about 4 or 5 processors. One problem that they specified was that this
+approach was usually bound by the speed of the slowest process, since
+processes marking off multiples of small primes had much more work
+to do than processes marking off multiples of large primes.
+
+We found a different approach detailed in 2014 paper called
+\textit{Parallelization of Sieve of Eratosthenes}\cite{Bhat}.
+Here, the authors
+separated the array of numbers such that each process was responsible
+for a contiguous block of the array. The first process would always
+be responsible for first $\sqrt{n}$ numbers. The first process would
+find a base prime number, then broadcast it to all of the other
+processes. Then, all processes would proceed to mark all numbers
+that are multiples of the broadcasted prime within their assigned
+chunk. This avoids some of the load imbalance problems from the NASA
+paper, but also introduces a few new ones, such as how each process
+can efficiently determine which numbers in its chunk are multiples of
+a number.
+
+\section {Your Solution}\label{soln}
+% 3-4 paragraphs describing what you plan to do, how you plan to do it, how it
+% solves the problem, and what types of conclusions you expect to draw from your
+% work.
+
+In order to test the parallel speedup that can be acheived with
+the Sieve of Eratosthenes, we plan to implement the algorithm in parallel,
+then measure performance with varying degrees of parallelization.
+Preliminary tests suggest that a sequential version of the algorithm
+can easily generate prime numbers less than 10 million in a extremely
+small amount of time, so, memory constraints permitting, we plan to
+run larger tests to more easily measure performance.
+
+We believe that using GPGPUs is the most promising way to implement
+the algorithm. This is because the actual computation involved in this algorithm
+is extremely simple, so any amount of overhead can significantly harm
+performance~\cite{Bohkari}. %TODO cite NASA paper
+Since GPGPU threads have access to shared memory, we don't have to
+incur the cost of merging separate process states. Additionally,
+we believe that this algorithm can take advantage of GPGPU's
+Single Instruction Multiple Thread (SIMD) architecture. We anticipate
+each thread in the program to be largely performing the same computation
+at every timestep: adding a base prime to its current value and marking
+that value in an array. A SIMD architecture allows these identical operations
+to be executed efficiently in lockstep with massive degrees of parallelization.
+
+Time permitting, we also hope to explore implementation on different systems.
+OpenMP seems promising, since it is optimized for parallelizing loops, and
+the bulk of the sequential Sieve is a for loop. Pthreads also have potential
+to effectively parallelize while still taking advantage of local shared memory,
+and OpenCL might be an effective way to use other kinds of hardware.
+
+We hypothesize that the parallel algorithm will exhibit significant speedup,
+but that this benefit will drop off after a certain number of processes.
+Of the two different implementation methods described in the Related Work
+section above, both have limitations that prevent parallel speedup after a
+certain point. The first method becomes bound by the thread with the heaviest
+workload, so after some point, adding threads does not help since there is still
+one thread that takes a very long time to complete~\cite{Bohkari}.
+The second method requires that
+the first process be responsible for $\sqrt{n}$ elements, which limits how
+much we can break the list down~\cite{Bhat}.
+Additionally, as the data space becomes
+more and more fragmented, individual processes are forced to spend more time
+linearly iterating through their portion of the list looking for the first
+instance of a multiple of the broadcasted prime.
+
+
+\section {Experiments}\label{exper}
+% 1-3 paragraphs describing how you plan to evaluate your work. List the
+% experiments you will perform. For each experiment, explain how you will perform
+% it and what the results will show explain why you are performing a particular
+% test).
+
+For our implementation of the Sieve, we plan to make the degree of parallelism
+and the size of the problem configurable via input parameter. For each
+implementation that we create (excluding the sequential one), we will run
+experiments with varying degrees of parallelization in order to determine
+the scalability of our algorithm.
+
+We also hope to compare our GPGPU implementation to other implementations on
+different systems. We plan to run the same tests for any implementations that we
+complete to allow us to compare the scalability and general performance of each
+one.
+
+In order to run our experiments, we plan to use Swarthmore College's Strelka
+cluster. Our GPGPU implementation can run on the GPU compute nodes, shared
+memory implementations would run on some other compute node, and any
+message-passing implementation would be able to use multiple nodes.
+
+\section {Equipment Needed}\label{equip}
+% 1 paragraph listing any software tools that you will need to implement and/or
+% test your work. If you need to have software installed to implement your
+% project, you should check with the systems lab to see if it is something that
+% can be installed on the CS lab machines.
+
+In order to implement and test our code, we will need compute nodes
+equipped with CUDA-compatible GPUs. We will also need the relevant
+libraries to allow us to compile code for CUDA, OpenMP, an possibly
+other parallel languages. We plan to access these nodes using ssh and
+to submit our jobs using slurm scripts or at scripts if necessary.
+
+\section {Schedule}\label{sched}
+% list the specific steps that you will take to complete your project, include
+% dates and milestones. This is particularly important to help keep you on track,
+% and to ensure that if you run into difficulties completing your entire project,
+% you have at least implemented steps along the way. Also, this is a great way to
+% get specific feedback from me about what you plan to do and how you plan to do
+% it.  Conclusions: 1 paragraph summary of what you are doing, why, how, and what
+% you hope to demonstrate through your work.
+\noindent We intend to break up the project into the following series of steps, with weekly 
+milestones:
+
+\begin{my_enumerate}
+    \item \textbf{Week 1} (Week of April 6th) \\
+     This week, we plan to go through and refine our sources, as well as concretize 
+     project planning and milestones. As we have the sequential Sieve of Eratosthenes 
+     code already implemented, we will begin drafting the parallel algorithm that uses 
+     CUDA's framework to apply a data-parallel sieve that strikes off primes in 
+     chunks of the initial array that have been distributed across multiple CUDA cores. 
+     
+     Our milestones for this week would include writing and submitting the project
+     proposal, writing and optimizing our potential CUDA kernel pseudocode, and 
+     potentially begin writing it out.
+     \vspace{0.1in}
+     
+    \item \textbf{Week 2} (Week of April 13th, Project Work Week)
+    
+     This week, we intend to completely implement, debug, and test the parallelized 
+     version of our proposed pseudocode. We will use slurm scripts to schedule comparision 
+     tests for different sizes of arrays on Swarthmore's Strelka cluster, for both 
+     the parallel and sequential versions of the array. Time allowing, we will begin 
+     exploring an OpenMP implementation of our Sieve using loop parallelization 
+     directives and synchronization primitives. We would also begin writing out 
+     pseudocode for the same, and implementing it if we have some spare time.
+     
+     Our milestones for this week shall be a parallelized CUDA version of 
+     the Sieve of Eratosthenes, producing and compiling tests results for 
+     both our sequential and parallel versions of the Sieve, and beginning an OpenMP 
+     implementation of our projects.
+     \vspace{0.1in}
+     
+    \item \textbf{Week 3} (Week of April 20th)
+    
+     This week, we will implement our proposed OpenMP version of the Sieve, and
+     schedule tests on the Strelka cluster to generate an extra set of results to 
+     compare against our CUDA implementation of the Sieve. Armed with these along
+     with our previous results, we will begin work on the project report, working 
+     through the introductory sections, describing experiments run, and submitting
+     our results. Time allowing, we would like to consider implementing a C Pthread 
+     implementation for further comparison, and begin analysing our results.
+     
+     Our milestones for the week would be a completed OpenMP version of the Sieve,
+     solid progress on the project report, and (potentially) a preliminary analysis
+     of results.
+     \vspace{0.1in}
+    
+    \item \textbf{Week 4} (Week of April 27th)
+    
+     For the final week, we shall continue analysing and discussing our results, 
+     leaving room for additional tests if needed. We will also begin work on the 
+     project presentation, and comment, clean, and restructure our repository code.
+     
+     Our milestones this week would be having our project report, final code, and a
+     project presentation based on our report.
+    
+\end{my_enumerate}
+
+% here is an example of a numbered list 
+% \begin{my_enumerate}
+%   \item Week 1: 
+%   \item Week 2: 
+% \end{my_enumerate} 
+
+% The References section is auto generated by specifying the .bib file
+% containing bibtex entries, and the style I want to use (plain)
+% compiling with latex, bibtex, latex, latex, will populate this
+% section with all references from the .bib file that I cite in this paper
+% and will set the citations in the prose to the numbered entry here
+\bibliography{proposal}
+\bibliographystyle{plain}
+
+% force a page break
+\newpage 
+
+% I want the Annotated Bib to be single column pages
+\onecolumn
+\section*{Annotated Bibliography}\label{annon} 
+
+%This section does not count towards the page total for your proposal.
+Multiprocessing the Sieve of Eratosthenes
+
+As far back as 1982, researchers at NASA used the Sieve of Eratosthenes as a 
+benchmark to test the capabilities of a parallel machine. They intentionally do 
+not exclude even numbers as the purpose is not to generate prime numbers efficiently 
+but to test the computer performance. They Implement a load balancing algorithm such 
+that it mitigates the load on the most overworked processor. This is because after the 
+number of processors increased above 5, speed was determined by the slowest processor.
+This method incurs a stiff cost as every processor's limit and current location had to
+be accessible by every other processor therefore stored in shared memory. However as the
+number of processors increased above 10, the cost of load balancing became less than the
+benefits and running time decreased compared to the more basic format which had such 
+info in registers. The machine used for testing was the Flex/32 multicomputer with
+20 processors, each with 1 MegaByte of local memory and 2 Megabytes of shared memory 
+accessible through a global bus.
+
+Parallelization of Sieve of Eratosthenes
+
+This paper greatly contributed to our research by demonstrating an alternative method of 
+parallelization. This paper parallelizes the Sieve by designating one master process which 
+finds prime numbers between up to $\sqrt{n}$, while other processes are tasked with finding 
+the multiples of this first prime. This does a good job of balancing tasks across nodes, but 
+it is not obvious if it is efficient overall. The primary source of wasted computation is the
+fact that every process needs to first find a  number that it is responsible for that is a multiple
+of the base prime. The only real way to do this without reverting to the sequential algorithm is for
+every process to iterate over its share of the data and test each individual element. If for every 
+base prime, each process had to scan over some number elements scaling with $n$, this would result 
+in a time complexity of $O(n^2)$. In reality, there are complications that make this assessment 
+imprecise, but that is beyond the scope of this paper, and no such analysis is provided in this source.
+
+
+Parallel Prime Sieve: Finding Prime Numbers
+
+Wirian, D. in his paper talks about how to use prime sieve techniques and their parallelizations to find 
+large prime numbers. He introduces and describes two such sieves: the Sieve of Eratosthenes 
+(which we investigate further in our project), and the Sieve of Atkin. Wirian
+describes the Sieve of Eratosthenes, which given an list of $n-1$ natural
+numbers $2, 3, 4, \ldots, n$, iterates through it from the start and marks
+off multiples of each as composite numbers. The loop stops after a prime larger than
+$\sqrt(n)$ is encountered, and the unmarked numbers thereafter are the primes 
+numbers with value less than $n$. He however discusses that this algorithm is
+not practical for finding large primes with hundreds of digits due to its
+$O(n \cdot \ln  \ln n)$ complexity.  He briefly describes the Sieve of Atkin,
+an optimized and more modernized version of Eratosthenes’ ancient sieve which
+uses modulo mathematics and then marks off multiples of a prime squared, 
+rather than the prime itself. Wirian then uses block decomposition to parallelize 
+the sequential Sieve of Eratosthenes algorithm, analyses the parallelization’s 
+complexity, and suggests three optimizations to further improve runtime and 
+cache hit rate. These include deleting even integers, finding sieving primes
+within each process using a private copy of the list, and reorganizing loops.
+
+
+\end{document}

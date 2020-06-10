@@ -1,0 +1,750 @@
+ 
+Timing Tests For parallel and sequantial runs of OpenMP Sieve
+=============================================================
+TEST RUN 1--------------------------------------------------
+ 
+n = 1x10^1 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.015s
+user	0m0.261s
+sys	0m0.029s
+____________________________________________________________ 
+ 
+n = 1x10^2 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.015s
+user	0m0.274s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^3 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.016s
+user	0m0.280s
+sys	0m0.003s
+____________________________________________________________ 
+ 
+n = 1x10^4 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.018s
+user	0m0.287s
+sys	0m0.002s
+____________________________________________________________ 
+ 
+n = 1x10^5 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.018s
+user	0m0.324s
+sys	0m0.005s
+____________________________________________________________ 
+ 
+n = 1x10^6 
+Sequential runtime: 
+
+real	0m0.008s
+user	0m0.007s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.017s
+user	0m0.311s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^7 
+Sequential runtime: 
+
+real	0m0.073s
+user	0m0.071s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.029s
+user	0m0.488s
+sys	0m0.003s
+____________________________________________________________ 
+ 
+n = 1x10^8 
+Sequential runtime: 
+
+real	0m2.080s
+user	0m2.057s
+sys	0m0.019s
+Parallel runtime: 
+
+real	0m0.224s
+user	0m2.909s
+sys	0m0.017s
+____________________________________________________________ 
+ 
+n = 1x10^9 
+Sequential runtime: 
+
+real	0m27.570s
+user	0m27.338s
+sys	0m0.178s
+Parallel runtime: 
+
+real	0m1.956s
+user	1m1.894s
+sys	0m0.190s
+____________________________________________________________ 
+ 
+n = 1x10^10 
+Sequential runtime: 
+
+real	5m9.268s
+user	5m6.807s
+sys	0m1.819s
+Parallel runtime: 
+
+real	0m18.813s
+user	10m52.806s
+sys	0m2.622s
+____________________________________________________________ 
+ 
+n = 1x10^11 
+Sequential runtime: 
+
+real	56m20.421s
+user	55m52.587s
+sys	0m20.525s
+Parallel runtime: 
+
+real	3m32.854s
+user	126m34.828s
+sys	0m31.424s
+____________________________________________________________ 
+ 
+n = 1x10^12 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^13 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^14 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^15 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^16 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^17 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^18 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+____________________________________________________________ 
+TEST RUN 2--------------------------------------------------
+ 
+n = 1x10^1 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.020s
+user	0m0.271s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^2 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.017s
+user	0m0.273s
+sys	0m0.018s
+____________________________________________________________ 
+ 
+n = 1x10^3 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.016s
+user	0m0.284s
+sys	0m0.002s
+____________________________________________________________ 
+ 
+n = 1x10^4 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.015s
+user	0m0.291s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^5 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.017s
+user	0m0.329s
+sys	0m0.028s
+____________________________________________________________ 
+ 
+n = 1x10^6 
+Sequential runtime: 
+
+real	0m0.008s
+user	0m0.008s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.018s
+user	0m0.342s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^7 
+Sequential runtime: 
+
+real	0m0.074s
+user	0m0.070s
+sys	0m0.003s
+Parallel runtime: 
+
+real	0m0.026s
+user	0m0.568s
+sys	0m0.003s
+____________________________________________________________ 
+ 
+n = 1x10^8 
+Sequential runtime: 
+
+real	0m2.022s
+user	0m2.000s
+sys	0m0.019s
+Parallel runtime: 
+
+real	0m0.189s
+user	0m3.163s
+sys	0m0.021s
+____________________________________________________________ 
+ 
+n = 1x10^9 
+Sequential runtime: 
+
+real	0m27.695s
+user	0m27.450s
+sys	0m0.190s
+Parallel runtime: 
+
+real	0m1.888s
+user	1m0.065s
+sys	0m0.244s
+____________________________________________________________ 
+ 
+n = 1x10^10 
+Sequential runtime: 
+
+real	5m9.262s
+user	5m6.851s
+sys	0m1.780s
+Parallel runtime: 
+
+real	0m19.599s
+user	11m7.282s
+sys	0m3.018s
+____________________________________________________________ 
+ 
+n = 1x10^11 
+Sequential runtime: 
+
+real	56m27.056s
+user	55m58.404s
+sys	0m21.146s
+Parallel runtime: 
+
+real	3m28.237s
+user	123m52.362s
+sys	0m29.842s
+____________________________________________________________ 
+ 
+n = 1x10^12 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^13 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^14 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^15 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^16 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^17 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^18 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+____________________________________________________________ 
+TEST RUN 3--------------------------------------------------
+ 
+n = 1x10^1 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.017s
+user	0m0.256s
+sys	0m0.003s
+____________________________________________________________ 
+ 
+n = 1x10^2 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.016s
+user	0m0.281s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^3 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.019s
+user	0m0.334s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^4 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.016s
+user	0m0.290s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^5 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.018s
+user	0m0.334s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^6 
+Sequential runtime: 
+
+real	0m0.008s
+user	0m0.007s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.017s
+user	0m0.312s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^7 
+Sequential runtime: 
+
+real	0m0.073s
+user	0m0.071s
+sys	0m0.002s
+Parallel runtime: 
+
+real	0m0.025s
+user	0m0.525s
+sys	0m0.004s
+____________________________________________________________ 
+ 
+n = 1x10^8 
+Sequential runtime: 
+
+real	0m2.048s
+user	0m2.025s
+sys	0m0.018s
+Parallel runtime: 
+
+real	0m0.191s
+user	0m3.743s
+sys	0m0.022s
+____________________________________________________________ 
+ 
+n = 1x10^9 
+Sequential runtime: 
+
+real	0m27.219s
+user	0m26.987s
+sys	0m0.181s
+Parallel runtime: 
+
+real	0m1.925s
+user	0m58.374s
+sys	0m0.216s
+____________________________________________________________ 
+ 
+n = 1x10^10 
+Sequential runtime: 
+
+real	5m7.782s
+user	5m5.326s
+sys	0m1.827s
+Parallel runtime: 
+
+real	0m19.705s
+user	11m24.732s
+sys	0m3.195s
+____________________________________________________________ 
+ 
+n = 1x10^11 
+Sequential runtime: 
+
+real	55m37.346s
+user	55m9.617s
+sys	0m20.765s
+Parallel runtime: 
+
+real	3m47.441s
+user	136m42.021s
+sys	0m27.175s
+____________________________________________________________ 
+ 
+n = 1x10^12 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^13 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^14 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^15 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^16 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^17 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^18 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+____________________________________________________________ 

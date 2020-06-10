@@ -1,0 +1,251 @@
+ 
+Timing Tests For parallel and sequantial runs of OpenMP Sieve
+=============================================================
+ 
+n = 1x10^1 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.017s
+user	0m0.267s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^2 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.016s
+user	0m0.278s
+sys	0m0.011s
+____________________________________________________________ 
+ 
+n = 1x10^3 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.016s
+user	0m0.264s
+sys	0m0.017s
+____________________________________________________________ 
+ 
+n = 1x10^4 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.016s
+user	0m0.283s
+sys	0m0.002s
+____________________________________________________________ 
+ 
+n = 1x10^5 
+Sequential runtime: 
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+
+real	0m0.014s
+user	0m0.254s
+sys	0m0.002s
+____________________________________________________________ 
+ 
+n = 1x10^6 
+Sequential runtime: 
+
+real	0m0.008s
+user	0m0.007s
+sys	0m0.001s
+Parallel runtime: 
+
+real	0m0.018s
+user	0m0.323s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^7 
+Sequential runtime: 
+
+real	0m0.072s
+user	0m0.068s
+sys	0m0.004s
+Parallel runtime: 
+
+real	0m0.026s
+user	0m0.549s
+sys	0m0.003s
+____________________________________________________________ 
+ 
+n = 1x10^8 
+Sequential runtime: 
+
+real	0m2.026s
+user	0m2.005s
+sys	0m0.017s
+Parallel runtime: 
+
+real	0m0.165s
+user	0m3.651s
+sys	0m0.020s
+____________________________________________________________ 
+ 
+n = 1x10^9 
+Sequential runtime: 
+
+real	0m27.195s
+user	0m26.959s
+sys	0m0.179s
+Parallel runtime: 
+
+real	0m1.969s
+user	1m5.027s
+sys	0m0.219s
+____________________________________________________________ 
+ 
+n = 1x10^10 
+Sequential runtime: 
+
+real	5m4.299s
+user	5m1.871s
+sys	0m1.746s
+Parallel runtime: 
+
+real	0m18.386s
+user	10m24.919s
+sys	0m2.958s
+____________________________________________________________ 
+ 
+n = 1x10^11 
+Sequential runtime: 
+
+real	55m3.229s
+user	54m35.335s
+sys	0m19.896s
+Parallel runtime: 
+
+real	3m41.740s
+user	132m23.900s
+sys	0m33.237s
+____________________________________________________________ 
+ 
+n = 1x10^12 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^13 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^14 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^15 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^16 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+____________________________________________________________ 
+ 
+n = 1x10^17 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 
+ 
+n = 1x10^18 
+Sequential runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Parallel runtime: 
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+____________________________________________________________ 

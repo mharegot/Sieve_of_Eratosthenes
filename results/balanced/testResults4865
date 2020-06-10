@@ -1,0 +1,251 @@
+ 
+Strelka tests for balanced sieve
+==============================================================
+ 
+n = 1x10^1
+Balanced runtime:
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.003s
+Sequential runtime:
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+___________________________________________________________
+ 
+n = 1x10^2
+Balanced runtime:
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.005s
+Sequential runtime:
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+___________________________________________________________
+ 
+n = 1x10^3
+Balanced runtime:
+
+real	0m0.003s
+user	0m0.002s
+sys	0m0.005s
+Sequential runtime:
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+___________________________________________________________
+ 
+n = 1x10^4
+Balanced runtime:
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.008s
+Sequential runtime:
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+___________________________________________________________
+ 
+n = 1x10^5
+Balanced runtime:
+
+real	0m0.008s
+user	0m0.008s
+sys	0m0.018s
+Sequential runtime:
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+___________________________________________________________
+ 
+n = 1x10^6
+Balanced runtime:
+
+real	0m0.016s
+user	0m0.034s
+sys	0m0.032s
+Sequential runtime:
+
+real	0m0.008s
+user	0m0.006s
+sys	0m0.002s
+___________________________________________________________
+ 
+n = 1x10^7
+Balanced runtime:
+
+real	0m0.045s
+user	0m0.165s
+sys	0m0.091s
+Sequential runtime:
+
+real	0m0.070s
+user	0m0.067s
+sys	0m0.003s
+___________________________________________________________
+ 
+n = 1x10^8
+Balanced runtime:
+
+real	0m0.207s
+user	0m2.130s
+sys	0m0.306s
+Sequential runtime:
+
+real	0m2.011s
+user	0m1.988s
+sys	0m0.019s
+___________________________________________________________
+ 
+n = 1x10^9
+Balanced runtime:
+
+real	0m2.486s
+user	0m54.063s
+sys	0m0.934s
+Sequential runtime:
+
+real	0m27.390s
+user	0m27.154s
+sys	0m0.180s
+___________________________________________________________
+ 
+n = 1x10^10
+Balanced runtime:
+
+real	0m19.817s
+user	7m26.396s
+sys	0m4.942s
+Sequential runtime:
+
+real	5m5.221s
+user	5m2.816s
+sys	0m1.793s
+___________________________________________________________
+ 
+n = 1x10^11
+Balanced runtime:
+
+real	3m24.930s
+user	78m41.845s
+sys	0m28.961s
+Sequential runtime:
+
+real	56m11.698s
+user	55m44.404s
+sys	0m20.275s
+___________________________________________________________
+ 
+n = 1x10^12
+Balanced runtime:
+Malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Sequential runtime:
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+___________________________________________________________
+ 
+n = 1x10^13
+Balanced runtime:
+Malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Sequential runtime:
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+___________________________________________________________
+ 
+n = 1x10^14
+Balanced runtime:
+Malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Sequential runtime:
+malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+___________________________________________________________
+ 
+n = 1x10^15
+Balanced runtime:
+Malloc failed
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+Sequential runtime:
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+___________________________________________________________
+ 
+n = 1x10^16
+Balanced runtime:
+Malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Sequential runtime:
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+___________________________________________________________
+ 
+n = 1x10^17
+Balanced runtime:
+Malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Sequential runtime:
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+___________________________________________________________
+ 
+n = 1x10^18
+Balanced runtime:
+Malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+Sequential runtime:
+malloc failed
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+___________________________________________________________

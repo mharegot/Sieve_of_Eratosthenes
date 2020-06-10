@@ -1,0 +1,110 @@
+Final Report Project, CS87 Spring 2020
+
+Overall:
+--------
+very nice project!  report is complete and very good.  
+
+see my notes under 1. and under 2./3. about adding figures.  these
+would be good for your presentation
+
+Details:
+-------
+----------------
+0. Does the abstract summarize the problem, the solution, and
+   summarize experimental questions and results?
+----------------
+
+yes!
+
+----------------
+1. Does the paper introduce the key issues, the key ideas of
+   the solution or breadth and depth of topic, the goals of the project, 
+   discuss related work and use proper citation?
+----------------
+
+* very nice intro motivation, clearly stated problem and idea of soln.  
+* add a figure of the Sieve of Eratosthenes to illustrate algorithm
+  (I'm sure you could find on the web). This will help explain/illustrate the 
+  idea of the algorithm at a higher level.
+* briefly add the ideas of your three different methods in the last 
+  paragraph of your introduction.
+* related work is good.  A little more explaination of why in a few
+  parts: why 4-5 nodes is a bottleneck.  why does broadcast avoid imballance?  
+* state more explicitly what the imbalance in the parallel algorithm 
+  is (is due to)
+
+more minor comments:
+* the sieve is solving a slightly different problem than you have talked about
+  so far in your intro (it is finding all prime numbers between 1 and N vs. 
+  checking if a number N is prime). It is worth adding a sentence to make 
+  this clear. 
+* after this sentence, "it can take significant work to discover whether or 
+  not N is a prime number", add breifly why...something like an algorithm 
+  has to check all values between 2 and sqrt(N) to determine if any are
+  even divisors of N.   
+* explain the complexity briefly (why it is O(nlnln) is not obvious).
+
+----------------
+2. Does the paper clearly present the parallel or distributed 
+  solution or system?  Are figures effectively used to help describe this?
+3. Is the system/solution/approach well explained.
+----------------
+
+* all methods (and variations) explained well, psuedo code good/helpful, 
+  nice discussion of expectations of different parallelizations
+
+* the cuda and pthreads are complicated enough that I think a figure
+  illustrating the algorithms would be helpful to understanding
+  (this would be nice to add in your talk)
+
+* other approaches nice addition here
+  * I suspect scaling to very large sizes, you would hit memory
+    limits of a single node, and then a distributed approach would
+    be beneficial (this is the point where on one machine partial
+    results would have to be saved to a file to make space in memory
+    for other portions of the problem).
+
+more minor comments:
+* don't use "we" when you are talking about steps of the algorithm (only
+  when you refer to yourselves should you use "we").
+* write in present-tense: "is" instead of "was", for example.
+* you could parallelize the loop on line 2 too
+
+--------------
+4. Are the experiments clearly described, well designed, and the 
+  results clearly presented?  Are the significance of the results discussed 
+  and analyzed?  
+----------------
+
+yes. very nice. complete.
+
+* experiements well designed
+* say how many CPUs there were on the machine you ran experiements on
+* nice results, explain a bit more in places though
+* explain why you think smaller runs are slower than seq (if it is different
+  for each approach, then say for each)
+* in pthread, what do you think is reason for high speedup with 1?  this is 
+  an odd result. 
+* nice discussion of results!  Figure 5 is very nice.
+
+more minor:
+
+* in graph results: adding in another graph of just the end of x-axis results, 
+  (and maybe in log scale) will help to see details at point where they 
+  are interesting.
+* did you add any timing of parts of cuda program to support any of your
+  hypotheses of the why of its results?
+
+----------------
+5. Is there a complete conclusion?  Are future directions to this
+  work presented/discussed?
+----------------
+
+yes.
+
+----------------
+6. Does the scope of the project and the completed components represent 
+  a half semester worth of work?
+----------------
+
+yes.  definitely.  nice job on this!
